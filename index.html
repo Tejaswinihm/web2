@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function vowel(vow){
+            var vow=document.getElementById('vowe').value;
+            var pos=0;
+            // vow=prompt("enter the String");
+            for(i=0;i<vow.length;i++){
+                if(vow.charAt(i)=='a' || vow.charAt(i)=='e' || vow.charAt(i)=='i' || vow.charAt(i)=='o' ||
+            vow.charAt(i)=='u'){
+               
+                pos=i;
+                alert("position at "+pos);
+            break;
+            }
+            }
+        }
+        function rever(){
+            var num=document.getElementById('reverse').value;
+            var rev="";
+            for(i=num.length;i>=0;i--){
+                rev+=num.charAt(i);
+                
+            }
+            alert("reverse= "+rev);
+        }
+    </script>
+</head>
+<body>
+    <center>
+        <h1>a. Parameter: A string Output: The position in the string of the left-most vowel.</h1>
+        <h2 onclick="vowel()">Find position of the vowel</h2>
+        <input type="text" id="vowe" placeholder="Vowel position">
+        <input type="button" value="Submit" onclick="vowel(document.getElementById('vowe').value)">
+        <h1>b. Parameter: A number Output: The number with its digits in the reverse order.</h1>
+        <h2 onclick="rever()">Reverse the string</h2>
+        <input type="text" id="reverse" placeholder="Reverse the String">
+        <input type="button" value="Submit" onclick="rever(document.getElementById('reverse').value)">
+
+    </center>
+</body>
+</html>
